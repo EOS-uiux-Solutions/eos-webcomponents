@@ -1,0 +1,22 @@
+{
+  "entrypoint": "index.html",
+  "npm": true,
+  "moduleResolution": "node",
+  "sources": [
+    "./components/**/**"
+  ],
+  "extraDependencies": [
+    "./node_modules/@webcomponents/webcomponentsjs/**"
+  ],
+  "builds": [
+    {
+      "bundle": true,
+      "js": {
+        "minify": false,
+        "transformModulesToAmd": true
+      },
+      "addServiceWorker": true,
+      "addPushManifest": true
+    }
+  ]
+}
