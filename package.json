@@ -19,6 +19,8 @@
   "homepage": "https://gitlab.com/SUSE-UIUX/EOS-webcomponents#readme",
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.3.0",
-    "lit-element": "^2.2.1"
+    "lit-element": "^2.2.1",
+    "polymer": "^0.5.0",
+    "polymer-cli": "^1.9.11"
   }
 }
