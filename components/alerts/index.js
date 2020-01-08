@@ -167,7 +167,6 @@ class EosAlert extends LitElement {
 
   render () {
     return html`
-
       <div class='alert ${this.type} ${this.scope}'>
         <i class="alert-icon eos-icons md-18">${this.icon[this.type]}</i>
         <div class='alert-body'>

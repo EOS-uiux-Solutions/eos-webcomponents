@@ -4,7 +4,7 @@
   "description": "The web components library for EOS",
   "main": "index.js",
   "scripts": {
-    "traspaile": "babel components --out-dir build && rollup -c"
+    "bundle": "babel components --out-dir build && rollup -c"
   },
   "repository": {
     "type": "git",

@@ -4,7 +4,7 @@ import common from 'rollup-plugin-commonjs';
 export default {
   input: 'build/index.js',
   output: {
-    file: 'eos-components.bundle.js',
+    file: 'build/eos-components.bundle.js',
     format: 'esm'
   },
   plugins: [
