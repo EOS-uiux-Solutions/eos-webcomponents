@@ -1,6 +1,7 @@
 'use strict'
 // Issue about seeing the text without css: https://github.com/Polymer/lit-element/issues/553
 import { LitElement, html, css } from 'lit-element';
+
 class EosAlert extends LitElement {
   static get properties () {
     return {
@@ -42,10 +43,7 @@ class EosAlert extends LitElement {
     }
 
     .alert
-    .alert-body {
-      width: 100%;
-    }
-
+    
     .alert
     .alert-title {
       font-size: 16px;
@@ -167,6 +165,11 @@ class EosAlert extends LitElement {
 
   render () {
     return html`
+     <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css"
+      />
+
       <div class='alert ${this.type} ${this.scope}'>
         <i class="alert-icon eos-icons md-18">${this.icon[this.type]}</i>
         <div class='alert-body'>
