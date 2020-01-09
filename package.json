@@ -4,7 +4,7 @@
   "description": "The web components library for EOS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "bundle": "babel components --out-dir build && rollup -c"
   },
   "repository": {
     "type": "git",
@@ -19,8 +19,17 @@
   "homepage": "https://gitlab.com/SUSE-UIUX/EOS-webcomponents#readme",
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.3.0",
-    "lit-element": "^2.2.1",
-    "polymer": "^0.5.0",
-    "polymer-cli": "^1.9.11"
+    "lit-element": "^2.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/plugin-proposal-decorators": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "babel-cli": "^6.26.0",
+    "rollup": "^1.26.5",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
   }
 }

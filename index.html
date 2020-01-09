@@ -4,15 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <!-- https://codesandbox.io/s/custom-component-react-pmfor -->
-
+  <title>EOS WebComponents</title>
 
   <!-- Load polyfills -->
   <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js" defer>
   </script>
 
-  <!-- Load EOS HTML variables -->
+  <!-- Load EOS CSS variables -->
   <link rel="stylesheet" href="./assets/eos-variables.css">
 
   <!-- Load components via WebComponents.waitFor -->
@@ -25,6 +23,7 @@
     });
   </script>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css" />
   
   <style>
     body {
@@ -42,34 +41,33 @@
   <div class="presentation">
     <!-- Global scope alert -->
     <eos-alert type='warning' scope='global'>
-      <slot>Lorem ipsum dolor sit amet consectetur adipisicing elit. In eligendi qui explicabo blanditiis quaerat nisi
-      </slot>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. In eligendi qui explicabo blanditiis quaerat nisi
     </eos-alert>
 
     <!-- Section scope alert -->
     <eos-alert type='success' scope='section' title="Success alert!">
-      <slot>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, fum?</slot>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, fum?
     </eos-alert>
 
     <eos-alert type='info' scope='section' title="Success alert!">
-      <slot>Lorem ipsum dolor sit amet consectetur.</slot>
+      Lorem ipsum dolor sit amet consectetur.
     </eos-alert>
   
     <eos-alert type='danger' scope='section' title="ERROR: 404!">
-      <slot>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sint quam quasi incidunt, animi ipsam similique asperiores natus, quibusdam necessitatibus minus saepe qui laborum, placeat quos molestias porro in.</slot>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sint quam quasi incidunt, animi ipsam similique asperiores natus, quibusdam necessitatibus minus saepe qui laborum, placeat quos molestias porro in.
     </eos-alert>
   
     <!-- Inline scope alert -->
     <eos-alert type='info' scope='inline'>
-      <slot>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, modi?</slot>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, modi?
     </eos-alert>
     
     <eos-alert type='warning' scope='inline'>
-      <slot>Lorem ipsum dolor sit.</slot>
+      Lorem ipsum dolor sit.
     </eos-alert>
 
     <eos-alert type='danger' scope='inline'>
-      <slot>Lorem ipsum, dolor sit amet consectetur adipisicing.</slot>
+      Lorem ipsum, dolor sit amet consectetur adipisicing.
     </eos-alert>
     
 

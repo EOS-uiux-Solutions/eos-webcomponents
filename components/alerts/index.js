@@ -43,10 +43,7 @@ class EosAlert extends LitElement {
     }
 
     .alert
-    .alert-body {
-      width: 100%;
-    }
-
+    
     .alert
     .alert-title {
       font-size: 16px;
@@ -168,7 +165,10 @@ class EosAlert extends LitElement {
 
   render () {
     return html`
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css">
+     <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css"
+      />
 
       <div class='alert ${this.type} ${this.scope}'>
         <i class="alert-icon eos-icons md-18">${this.icon[this.type]}</i>
