@@ -43,8 +43,6 @@ class EosAlert extends LitElement {
     }
 
     .alert
-    
-    .alert
     .alert-title {
       font-size: 16px;
       font-weight: bold;
@@ -96,6 +94,7 @@ class EosAlert extends LitElement {
     .alert-body {
       display: flex;
       flex-direction: column;
+      width: 100%;
     }
 
     .section.success,
