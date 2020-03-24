@@ -11,8 +11,38 @@
     "url": "git+ssh://git@gitlab.com/SUSE-UIUX/EOS-webcomponents.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "SUSE UX/UI team",
+  "contributors": [
+    {
+      "name": "Cynthia Sanchez",
+      "web": "https://de.linkedin.com/in/cyntsanchez"
+    },
+    {
+      "name": "Jesus Herman",
+      "web": "https://www.linkedin.com/in/jesushermanmarina/"
+    },
+    {
+      "name": "Zvezdana Marjanovic",
+      "web": "https://www.linkedin.com/in/zvezdana-marjanovic-5375b251"
+    },
+    {
+      "name": "Manuele Carlini",
+      "web": "https://www.linkedin.com/in/manuelecarlini"
+    },
+    {
+      "name": "Kenneth Wimer",
+      "web": "https://www.linkedin.com/in/kennethwimer"
+    },
+    {
+      "name": "Richa Bishts",
+      "web": "https://www.linkedin.com/in/richabisht"
+    },
+    {
+      "name": "Sorin Curescu",
+      "web": "https://www.linkedin.com/in/en3sis"
+    }
+  ],
+  "license": "MIT",
   "bugs": {
     "url": "https://gitlab.com/SUSE-UIUX/EOS-webcomponents/issues"
   },
@@ -27,9 +57,13 @@
     "@babel/plugin-proposal-class-properties": "^7.7.0",
     "@babel/plugin-proposal-decorators": "^7.7.0",
     "@babel/preset-env": "^7.7.1",
+    "@semantic-release/git": "^5.0.0",
+    "@semantic-release/gitlab": "^2.1.4",
     "babel-cli": "^6.26.0",
+    "conventional-changelog-eslint": "^1.0.9",
     "rollup": "^1.26.5",
     "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0"
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "semantic-release": "^15.14.0"
   }
 }
