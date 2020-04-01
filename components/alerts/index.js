@@ -29,7 +29,23 @@ class EosAlert extends LitElement {
     return css`
     :host {
       width: 100%;
+      height: auto;
       position: relative;
+    }
+
+
+    ::slotted(a) {
+      color: var(--eos-bc-gray-1000) ;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    ::slotted(a:hover) {
+      text-decoration: none;
+    }
+
+    slot[scope=global]::slotted(a) {
+      color: white ;
     }
 
     /* ==== General==== */
@@ -37,9 +53,10 @@ class EosAlert extends LitElement {
       border-left: 5px solid;
       display: flex;
       margin-bottom: 20px;
-      margin: 16px;
+      margin: 0;
       padding: 8px;
       width: 100%;
+      position: relative;
     }
 
     .alert
@@ -56,6 +73,8 @@ class EosAlert extends LitElement {
 
     .alert-close {
       cursor: pointer;
+      position: absolute;
+      right: 0;
     }
 
     .alert-title {
@@ -85,6 +104,10 @@ class EosAlert extends LitElement {
     }
     .global.danger {
       background-color: var(--eos-bc-red-500);
+    }
+
+    .global .alert-close {
+      right: 24px;
     }
 
     /* ==== Section and Inline ==== */
@@ -158,7 +181,7 @@ class EosAlert extends LitElement {
     `;
   }
 
-  closeAlert() {
+  closeAlert () {
     this.remove()
   }
 
@@ -173,10 +196,10 @@ class EosAlert extends LitElement {
         <i class="alert-icon eos-icons md-18">${this.icon[this.type]}</i>
         <div class='alert-body'>
             <div class='alert-title ${(this.title || 'hide')}'> ${this.title} </div>
-            <p> <slot/> </p>
+            <p> <slot scope='${this.scope}'/> </p>
         </div>
         <div class='alert-close' @click='${this.closeAlert}'>
-          <i class='eos-icons ${this.type === 'danger' ? 'hide': ''} md-18'>close</i>
+          <i class='eos-icons ${this.type === 'danger' ? 'hide' : ''} md-18'>close</i>
         </div>
       </div>
     `;
