@@ -56,6 +56,7 @@ class EosAlert extends LitElement {
       margin: 0;
       padding: 8px;
       width: 100%;
+      position: relative;
     }
 
     .alert
@@ -74,10 +75,6 @@ class EosAlert extends LitElement {
       cursor: pointer;
       position: absolute;
       right: 0;
-    }
-
-    .alert-close i {
-      margin: 0;
     }
 
     .alert-title {
