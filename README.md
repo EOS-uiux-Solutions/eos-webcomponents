@@ -49,7 +49,7 @@ Please have a look at LitElement's [styling guidelines](https://lit-element.poly
 
 When creating a component, we define all root variables in a single css document. These are declared only once and then shared accross components. Our components' root variables are defined in `assets/eos-variables.css`.
 
-#### This is how the root variables are defined
+#### This is how variables are used
 
 ```css
 .section.success,
@@ -121,8 +121,8 @@ For frameworks, we can deliver npm packages with the components without bundling
 ```javascript
 import React from "react";
 import ReactDOM from "react-dom";
-/* EOS WEB COMPONENTS */
-Import "./eos-variables.css";
+/* EOS web components */
+import "./eos-variables.css";
 import "../components/alerts/index";
  
 function App() {
