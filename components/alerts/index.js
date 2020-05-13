@@ -189,7 +189,7 @@ class EosAlert extends LitElement {
     return html`
      <link
         rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css"
+        href="https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css"
       />
 
       <div class='alert ${this.type} ${this.scope}'>
