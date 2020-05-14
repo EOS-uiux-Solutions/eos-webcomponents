@@ -39,7 +39,7 @@ class EosAlert extends LitElement {
                          ${this.title}
                      </div>
                      <p><slot/></p>
-                 </div> 
+                 </div>
 ...
 ```
 
@@ -124,15 +124,15 @@ import ReactDOM from "react-dom";
 /* EOS web components */
 import "./eos-variables.css";
 import "../components/alerts/index";
- 
+
 function App() {
  return (
    <div className="App">
      <h1>React APP</h1>
      <h2>Testing custom element</h2>
- 
+
      <eos-alert type="warning" scope="global">
-         Lorem ipsum dolor sit amet consectetur elit. 
+         Lorem ipsum dolor sit amet consectetur elit.
      </eos-alert>
 ...
 ```
@@ -147,11 +147,11 @@ function App() {
 
 * [Follow us on Twitter](https://twitter.com/eosdesignsystem)
 
+* [Join us in Slack](https://eos-community.slack.com/)
+
 # Our "thank you" section
 
 ### Tested for every browser in every device
 
 Thanks to [Browserstack](https://www.browserstack.com) and their continuous contribution to open source projects, we continuously test the EOS to make sure all our features and components work perfectly fine in all browsers.
 Browserstack helps us make sure our Design System also delivers a peace of mind to all developers and designers making use of our components and layout in their products.
-
-
