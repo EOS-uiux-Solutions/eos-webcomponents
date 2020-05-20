@@ -8,6 +8,7 @@ class EosAlert extends LitElement {
       type: { type: String },
       scope: { type: String },
       title: { type: String },
+      mobile: { type: String },
       icon: { type: Object }
     }
   }
@@ -17,6 +18,7 @@ class EosAlert extends LitElement {
     this.type = this.type
     this.scope = this.scope
     this.title = this.title
+    this.mobile = this.mobile
     this.icon = {
       'success': 'check_circle',
       'info': 'info',
@@ -92,7 +94,7 @@ class EosAlert extends LitElement {
       padding: 0 16px;
       position: fixed;
       top: 0;
-      width: 99%;
+      width: calc(100% - 20px);
       z-index: 1040;
     }
 
@@ -170,13 +172,28 @@ class EosAlert extends LitElement {
       display: none;
     }
 
-    .md-18 {
+    .eos-18 {
       font-size: 18px;
     }
 
     .eos-icons {
       margin-right: 8px;
       vertical-align: bottom;
+    }
+    
+    /* ==== Mobile class ==== */
+    .global .alert-global-mobile {
+      display: none;
+    }
+
+    @media screen and (max-width: 769px) {
+      .global .alert-global-mobile {
+        display: block;
+      }
+
+      .global .alert-global-desktop {
+        display: none;
+      }
     }
     `;
   }
@@ -193,13 +210,14 @@ class EosAlert extends LitElement {
       />
 
       <div class='alert ${this.type} ${this.scope}'>
-        <i class="alert-icon eos-icons md-18">${this.icon[this.type]}</i>
+        <i class="alert-icon eos-icons eos-18">${this.icon[this.type]}</i>
         <div class='alert-body'>
             <div class='alert-title ${(this.title || 'hide')}'> ${this.title} </div>
-            <p> <slot scope='${this.scope}'/> </p>
+            <p class='alert-global-mobile')}'> ${this.mobile} </p>
+            <p class='alert-global-desktop'> <slot/> </p>
         </div>
         <div class='alert-close' @click='${this.closeAlert}'>
-          <i class='eos-icons ${this.type === 'danger' ? 'hide' : ''} md-18'>close</i>
+          <i class='eos-icons ${this.type === 'danger' ? 'hide': ''} eos-18'>close</i>
         </div>
       </div>
     `;

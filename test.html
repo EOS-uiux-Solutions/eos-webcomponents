@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,44 +7,31 @@
   <title>EOS WebComponents</title>
 
   <!-- Load polyfills -->
-  <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js" defer>
+  <script src="./build/eos-components.bundle.js" defer>
   </script>
 
   <!-- Load EOS CSS variables -->
   <link rel="stylesheet" href="./assets/eos-variables.css">
 
-  <!-- Load components via WebComponents.waitFor -->
-  <script type="module">
-    window.WebComponents = window.WebComponents || {
-      waitFor(cb) { addEventListener('WebComponentsReady', cb) }
-    }
-    WebComponents.waitFor(async () => {
-      import('./components/alerts/index.js');
-    });
-  </script>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css" />
-
+  
   <style>
     body {
       font-family: 'Lato', Arial;
     }
-
     .presentation {
-      width: 700px;
+      width:700px;
       display: flex;
       flex-direction: column;
       margin: 100px auto;
     }
   </style>
 </head>
-
 <body>
   <div class="presentation">
     <!-- Global scope alert -->
     <eos-alert type='warning' scope='global' mobile="This is mobile message">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. In eligendi qui explicabo blanditiis quaerat nisi <a
-        href="#">asasa</a>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. In eligendi qui explicabo blanditiis quaerat nisi 
     </eos-alert>
 
     <!-- Section scope alert -->
@@ -56,27 +42,25 @@
     <eos-alert type='info' scope='section' title="Success alert!">
       Lorem ipsum dolor sit amet consectetur.
     </eos-alert>
-
+  
     <eos-alert type='danger' scope='section' title="ERROR: 404!">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sint quam quasi incidunt, animi ipsam
-      similique asperiores natus, quibusdam necessitatibus minus saepe qui laborum, placeat quos molestias porro in.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sint quam quasi incidunt, animi ipsam similique asperiores natus, quibusdam necessitatibus minus saepe qui laborum, placeat quos molestias porro in.
     </eos-alert>
-
+  
     <!-- Inline scope alert -->
     <eos-alert type='info' scope='inline'>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, modi?
     </eos-alert>
-
+    
     <eos-alert type='warning' scope='inline'>
       Lorem ipsum dolor sit.
     </eos-alert>
 
     <eos-alert type='danger' scope='inline'>
-      Lorem ipsum, dolor sit amet consectetur adipisicing. <a href="#">Test</a>
+      Lorem ipsum, dolor sit amet consectetur adipisicing.
     </eos-alert>
-
+    
 
   </div>
 </body>
-
 </html>
