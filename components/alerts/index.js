@@ -49,7 +49,7 @@ class EosAlert extends LitElement {
     }
 
     slot[scope=global]::slotted(a) {
-      color: white ;
+      color: var(--eos-bc-white) ;
     }
 
     /* ==== General==== */
