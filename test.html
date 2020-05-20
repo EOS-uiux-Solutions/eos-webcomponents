@@ -7,23 +7,13 @@
   <title>EOS WebComponents</title>
 
   <!-- Load polyfills -->
-  <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js" defer>
+  <script src="./build/eos-components.bundle.js" defer>
   </script>
 
   <!-- Load EOS CSS variables -->
   <link rel="stylesheet" href="./assets/eos-variables.css">
 
-  <!-- Load components via WebComponents.waitFor -->
-  <script type="module">
-    window.WebComponents = window.WebComponents || {
-      waitFor(cb) { addEventListener('WebComponentsReady', cb) }
-    }
-    WebComponents.waitFor(async () => {
-      import('./components/alerts/index.js');
-    });
-  </script>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/eos-icons/dist/extended/css/eos-icons-extended.css" />
   
   <style>
     body {
