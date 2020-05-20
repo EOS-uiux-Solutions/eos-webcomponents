@@ -2381,8 +2381,18 @@ LitElement['finalized'] = true;
  */
 LitElement.render = render$1;
 
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["<div class='alert-close' @click='", "'><i class='eos-icons ", " md-18'>close</i></div>"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n     <link\n        rel=\"stylesheet\"\n        href=\"https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css\"\n      />\n\n      <div class='alert ", " ", "'>\n        <i class=\"alert-icon eos-icons md-18\">", "</i>\n        <div class='alert-body'>\n            <div class='alert-title ", "'> ", " </div>\n            <p> <slot scope='", "'/> </p>\n        </div>\n        <div class='alert-close' @click='", "'>\n          <i class='eos-icons ", " md-18'>close</i>\n        </div>\n      </div>\n    "]);
+  var data = _taggedTemplateLiteral(["\n     <link\n        rel=\"stylesheet\"\n        href=\"https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css\"\n      />\n\n      <div class='alert ", " ", "'>\n        <i class=\"alert-icon eos-icons eos-18\">", "</i>\n        <div class='alert-body'>\n            <div class='alert-title ", "'> ", " </div>\n            <p class='alert-global-mobile')}'> ", " </p>\n            <p class='alert-global-desktop'> <slot/> </p>\n        </div>\n        <div class='alert-close' @click='", "'>\n          <i class='eos-icons ", " eos-18'>close</i>\n        </div>\n        ", "\n\n\n      </div>\n    "]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -2392,7 +2402,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n    :host {\n      width: 100%;\n      height: auto;\n      position: relative;\n    }\n\n\n    ::slotted(a) {\n      color: var(--eos-bc-gray-1000) ;\n      text-decoration: underline;\n      font-weight: bold;\n    }\n\n    ::slotted(a:hover) {\n      text-decoration: none;\n    }\n\n    slot[scope=global]::slotted(a) {\n      color: white ;\n    }\n\n    /* ==== General==== */\n    .alert {\n      border-left: 5px solid;\n      display: flex;\n      margin-bottom: 20px;\n      margin: 0;\n      padding: 8px;\n      width: 100%;\n      position: relative;\n    }\n\n    .alert\n    .alert-title {\n      font-size: 16px;\n      font-weight: bold;\n      margin-bottom: 8px;\n    }\n\n    p {\n      margin: 0;\n      font-size: 14px;\n    }\n\n    .alert-close {\n      cursor: pointer;\n      position: absolute;\n      right: 0;\n    }\n\n    .alert-title {\n      font-weight: bold;\n    }\n\n    /* ==== Global ==== */\n    .global {\n      align-items: center;\n      border: 0;\n      color: #ffffff;\n      height: 37px;\n      left: 0;\n      margin: 0;\n      padding: 0 16px;\n      position: fixed;\n      top: 0;\n      width: 99%;\n      z-index: 1040;\n    }\n\n    .global.warning {\n      background-color: var(--eos-bc-yellow-900);\n    }\n    .global.info {\n      background-color: var(--eos-bc-cerulean-500);\n    }\n    .global.danger {\n      background-color: var(--eos-bc-red-500);\n    }\n\n    .global .alert-close {\n      right: 24px;\n    }\n\n    /* ==== Section and Inline ==== */\n    .section\n    .alert-body,\n    .inline\n    .alert-body {\n      display: flex;\n      flex-direction: column;\n      width: 100%;\n    }\n\n    .section.success,\n    .inline.success {\n      background-color: var(--eos-bc-green-100);\n      border-color: var(--eos-bc-green-500);\n    }\n\n    .section.warning,\n    .inline.warning {\n      background-color: var(--eos-bc-yellow-100);\n      border-color: var(--eos-bc-yellow-900);\n    }\n\n    .section.info,\n    .inline.info {\n      background-color: var(--eos-bc-cerulean-100);\n      border-color: var(--eos-bc-cerulean-500);\n    }\n\n    .section.danger,\n    .inline.danger {\n      background-color: var(--eos-bc-red-100);\n      border-color: var(--eos-bc-red-500);\n    }\n\n    /* ==== Icons inside alerts color ==== */\n    .success .alert-icon {\n      color: var(--eos-bc-green-500)\n    }\n\n    .warning .alert-icon {\n      color: var(--eos-bc-yellow-900)\n    }\n\n    .info .alert-icon {\n      color: var(--eos-bc-cerulean-500)\n    }\n\n    .danger .alert-icon {\n      color: var(--eos-bc-red-500)\n    }\n\n    .global .alert-icon {\n      color: #fff;\n    }\n\n    /* ==== Helpers ==== */\n    .hide {\n      display: none;\n    }\n\n    .md-18 {\n      font-size: 18px;\n    }\n\n    .eos-icons {\n      margin-right: 8px;\n      vertical-align: bottom;\n    }\n    "]);
+  var data = _taggedTemplateLiteral(["\n    :host {\n      width: 100%;\n      height: auto;\n      position: relative;\n    }\n\n\n    ::slotted(a) {\n      color: var(--eos-bc-gray-1000) ;\n      text-decoration: underline;\n      font-weight: bold;\n    }\n\n    ::slotted(a:hover) {\n      text-decoration: none;\n    }\n\n    slot[scope=global]::slotted(a) {\n      color: white ;\n    }\n\n    /* ==== General==== */\n    .alert {\n      border-left: 5px solid;\n      display: flex;\n      margin-bottom: 20px;\n      margin: 0;\n      padding: 8px;\n      width: 100%;\n      position: relative;\n    }\n\n    .alert\n    .alert-title {\n      font-size: 16px;\n      font-weight: bold;\n      margin-bottom: 8px;\n    }\n\n    p {\n      margin: 0;\n      font-size: 14px;\n    }\n\n    .alert-close {\n      cursor: pointer;\n      position: absolute;\n      right: 0;\n      margin-left: auto;\n    }\n\n    .alert-title {\n      font-weight: bold;\n    }\n\n    /* ==== Global ==== */\n    .global {\n      align-items: center;\n      border: 0;\n      color: #ffffff;\n      height: 37px;\n      left: 0;\n      margin: 0;\n      padding: 0 16px;\n      position: fixed;\n      top: 0;\n      width: calc(100% - 20px);\n      z-index: 1040;\n    }\n\n    .global.warning {\n      background-color: var(--eos-bc-yellow-900);\n    }\n    .global.info {\n      background-color: var(--eos-bc-cerulean-500);\n    }\n    .global.danger {\n      background-color: var(--eos-bc-red-500);\n    }\n\n    .global .alert-close {\n      right: 24px;\n    }\n\n    /* ==== Section and Inline ==== */\n    .section\n    .alert-body,\n    .inline\n    .alert-body {\n      display: flex;\n      flex-direction: column;\n      width: 100%;\n    }\n\n    .section.success,\n    .inline.success {\n      background-color: var(--eos-bc-green-100);\n      border-color: var(--eos-bc-green-500);\n    }\n\n    .section.warning,\n    .inline.warning {\n      background-color: var(--eos-bc-yellow-100);\n      border-color: var(--eos-bc-yellow-900);\n    }\n\n    .section.info,\n    .inline.info {\n      background-color: var(--eos-bc-cerulean-100);\n      border-color: var(--eos-bc-cerulean-500);\n    }\n\n    .section.danger,\n    .inline.danger {\n      background-color: var(--eos-bc-red-100);\n      border-color: var(--eos-bc-red-500);\n    }\n\n    /* ==== Icons inside alerts color ==== */\n    .success .alert-icon {\n      color: var(--eos-bc-green-500)\n    }\n\n    .warning .alert-icon {\n      color: var(--eos-bc-yellow-900)\n    }\n\n    .info .alert-icon {\n      color: var(--eos-bc-cerulean-500)\n    }\n\n    .danger .alert-icon {\n      color: var(--eos-bc-red-500)\n    }\n\n    .global .alert-icon {\n      color: #fff;\n    }\n\n    /* ==== Helpers ==== */\n    .hide {\n      display: none;\n    }\n\n    .eos-18 {\n      font-size: 18px;\n    }\n\n    .eos-icons {\n      margin-right: 8px;\n      vertical-align: bottom;\n    }\n    \n    /* ==== Mobile class ==== */\n    .global .alert-global-mobile {\n      display: none;\n    }\n\n    @media screen and (max-width: 769px) {\n      .global .alert-global-mobile {\n        display: block;\n      }\n\n      .global .alert-global-desktop {\n        display: none;\n      }\n    }\n    "]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -2417,6 +2427,12 @@ class EosAlert extends LitElement {
       },
       icon: {
         type: Object
+      },
+      close: {
+        type: Boolean
+      },
+      mobile: {
+        type: String
       }
     };
   }
@@ -2426,12 +2442,14 @@ class EosAlert extends LitElement {
     this.type = this.type;
     this.scope = this.scope;
     this.title = this.title;
+    this.mobile = this.mobile;
     this.icon = {
       'success': 'check_circle',
       'info': 'info',
       'warning': 'warning',
       'danger': 'error'
     };
+    this.close = this.close;
   }
 
   static get styles() {
@@ -2443,9 +2461,83 @@ class EosAlert extends LitElement {
   }
 
   render() {
-    return html(_templateObject2(), this.type, this.scope, this.icon[this.type], this.title || 'hide', this.title, this.scope, this.closeAlert, this.type === 'danger' ? 'hide' : '');
+    return html(_templateObject2(), this.type, this.scope, this.icon[this.type], this.title || 'hide', this.title, this.mobile, this.closeAlert, this.type === 'danger' ? 'hide' : '', this.close ? '' : html(_templateObject3(), this.closeAlert, this.type === 'danger' ? 'hide' : ''));
   }
 
 }
 
 customElements.define('eos-alert', EosAlert);
+
+function _templateObject3$1() {
+  var data = _taggedTemplateLiteral$1(["<i class='eos-icons eos-18'>", "</i>"]);
+
+  _templateObject3$1 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2$1() {
+  var data = _taggedTemplateLiteral$1(["\n     <link\n        rel=\"stylesheet\"\n        href=\"https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css\"\n      />\n\n      <button class='btn ", " ", " ", "'>\n        ", "\n        <slot></slot>\n      </button>\n\n    "]);
+
+  _templateObject2$1 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$1() {
+  var data = _taggedTemplateLiteral$1(["\n    :host {\n      margin-right: 1em;\n    }\n\n    ::slotted(a) {\n      color: var(--eos-bc-gray-1000);\n      text-decoration: underline;\n      font-weight: bold;\n    }\n\n    ::slotted(a:hover) {\n      text-decoration: none;\n    }\n\n    slot[scope=global]::slotted(a) {\n      color: white ;\n    }\n\n    /* ==== General ==== */\n    .btn {\n      -webkit-appearance: button;\n      background-color: transparent;\n      border: 1px solid transparent;\n      border-radius: 20px;\n      display: inline-block;\n      font-family: inherit;\n      font-size: 14px;\n      font-weight: bold;\n      line-height: 1.5em;\n      overflow: visible;\n      padding: 8px 16px;\n      text-align: center;\n      text-transform: none;\n      transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;\n      user-select: none;\n      vertical-align: middle;\n      white-space: nowrap;\n    }\n\n    .btn:not(:disabled):not(.disabled) {\n      cursor: pointer;\n    }\n    /* ==== Primary ==== */\n    .primary {\n      background-color: var(--eos-bc-green-500);\n      border-color: var(--eos-bc-green-500);\n      color: var(--eos-bc-white);\n    }\n    .primary:hover, .primary:active:hover {\n      background-color: var(--eos-bc-green-900);\n      border-color: var(--eos-bc-green-900);\n      color: var(--eos-bc-white);\n    }\n    /* ==== Primary disabled ==== */\n    .primary.disabled, .primary.disabled:hover, .primary.disabled:focus {\n      background-color: var(--eos-bc-green-500);\n      border-color: var(--eos-bc-green-500);\n      opacity: 0.6;\n    }\n    /* ==== Primary outline ==== */\n    .primary-outline {\n      border-color: var(--eos-bc-green-500);\n      color: var(--eos-bc-green-500);\n      background-image: none;\n    }\n    .primary-outline:hover, .primary-outline:active:hover {\n      border-color: var(--eos-bc-green-900);\n      color: var(--eos-bc-green-900);\n    }\n    /* ==== Primary outline disabled ==== */\n    .primary-outline.disabled, .primary-outline.disabled:hover, .primary-outline.disabled:focus {\n      border-color: var(--eos-bc-green-500);\n      color: var(--eos-bc-green-500);\n      opacity: 0.6;\n    }\n    /* ==== Secondary ==== */\n    .secondary {\n      border-color: var(--eos-bc-gray-1000);\n      color: var(--eos-bc-gray-1000);\n    }\n    .secondary:hover, .btn-secondary:active:hover {\n      border-color: var(--eos-bc-gray-900);\n      color: var(--eos-bc-gray-900);\n    }\n    /* ==== Secondary disabled ==== */\n    .secondary.disabled, .secondary.disabled:hover, .secondary.disabled:focus {\n      background-color: transparent;\n      border-color: var(--eos-bc-gray-500);\n      color: var(--eos-bc-gray-500);\n      opacity: 0.6;\n    }\n    /* ==== Secondary inverse ==== */\n    .secondary-inverse {\n      border-color: var(--eos-bc-white);\n      color: var(--eos-bc-white);\n    }\n    .secondary-inverse:hover, .secondary-inverse:active:hover {\n      border-color: var(--eos-bc-gray-100);\n      color: var(--eos-bc-gray-100);\n    }\n    .secondary-inverse.disabled, .secondary-inverse.disabled:hover, .secondary-inverse.disabled:focus {\n      background-color: transparent;\n      border-color: var(--eos-bc-white);\n      color: var(--eos-bc-white);\n      opacity: 0.6;\n    }\n    .secondary-inverse.disabled, .secondary-inverse.disabled:hover, .secondary-inverse.disabled:focus {\n      background-color: transparent;\n      border-color: var(--eos-bc-white);\n      color: var(--eos-bc-white);\n      opacity: 0.6;\n    }\n    /* ==== Danger button ==== */\n    .danger {\n      background-color: var(--eos-bc-red-500);\n      border-color: var(--eos-bc-red-500);\n      color: var(--eos-bc-white);\n    }\n    .danger:hover, .danger:active:hover {\n      background-color: var(--eos-bc-red-900);\n      border-color: var(--eos-bc-red-900);\n      color: var(--eos-bc-white);\n    }\n    .danger.disabled, .danger.disabled:hover, .danger.disabled:focus {\n      background-color: var(--eos-bc-red-500);\n      border-color: var(--eos-bc-red-500);\n      color: var(--eos-bc-white);\n      opacity: 0.6;\n    }\n    .danger.disabled, .danger.disabled:hover, .danger.disabled:focus {\n      background-color: var(--eos-bc-red-500);\n      border-color: var(--eos-bc-red-500);\n      color: var(--eos-bc-white);\n      opacity: 0.6;\n    }\n    /* ==== Icon button ==== */\n    .hide {\n      display: none;\n    }\n    .eos-18 {\n      font-size: 18px;\n      width: 18px;\n    }\n    .btn .eos-icons {\n      margin-right: 0;\n      pointer-events: none;\n      vertical-align: text-bottom;\n    }\n    /* ==== Sizes ==== */\n    .block {\n      display: block;\n      width: 100%;\n    }\n    .small {\n      padding: 4px 8px;\n    }\n    "]);
+
+  _templateObject$1 = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral$1(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+class EosButton extends LitElement {
+  static get properties() {
+    return {
+      type: {
+        type: String
+      },
+      state: {
+        type: String
+      },
+      scope: {
+        type: String
+      },
+      icon: {
+        type: String
+      },
+      size: {
+        type: String
+      }
+    };
+  }
+
+  constructor() {
+    super();
+    this.type = this.type;
+    this.state = this.state;
+    this.scope = this.scope;
+    this.icon = this.icon;
+    this.size = this.size;
+  }
+
+  static get styles() {
+    return css(_templateObject$1());
+  }
+
+  render() {
+    return html(_templateObject2$1(), this.type, this.state, this.size, this.icon ? html(_templateObject3$1(), this.icon) : '');
+  }
+
+}
+
+customElements.define('eos-button', EosButton);

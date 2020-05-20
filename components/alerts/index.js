@@ -9,8 +9,8 @@ class EosAlert extends LitElement {
       scope: { type: String },
       title: { type: String },
       icon: { type: Object },
-      close: { type: Boolean }
-      mobile: { type: String },
+      close: { type: Boolean },
+      mobile: { type: String }
     }
   }
 
