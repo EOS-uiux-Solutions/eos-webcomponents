@@ -47,7 +47,11 @@ class EosAlert extends LitElement {
     }
 
     slot[scope=global]::slotted(a) {
-      color: var(--eos-bc-white) ;
+      color: var(--eos-bc-white);
+    }
+
+    slot[name=mobile]::slotted(a) {
+      color: red;
     }
 
     /* ==== General==== */
@@ -213,8 +217,8 @@ class EosAlert extends LitElement {
         <i class="alert-icon eos-icons eos-18">${this.icon[this.type]}</i>
         <div class='alert-body'>
             <div class='alert-title ${(this.title || 'hide')}'> ${this.title} </div>
-            <p class='alert-global-mobile')}'> ${this.mobile} </p>
-            <p class='alert-global-desktop'> <slot/> </p>
+            <p class='alert-global-mobile'> <slot scope='${this.scope}' name='mobile'/> </p>
+            <p class='alert-global-desktop'> <slot scope='${this.scope}'/> </p>
         </div>
         <div class='alert-close' @click='${this.closeAlert}'>
           <i class='eos-icons ${this.type === 'danger' ? 'hide': ''} eos-18'>close</i>
