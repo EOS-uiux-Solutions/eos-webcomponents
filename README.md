@@ -147,7 +147,7 @@ function App() {
 
 * [Follow us on Twitter](https://twitter.com/eosdesignsystem)
 
-* [Join us in Slack](https://eos-community.slack.com/)
+* [Join us in Slack](https://slack.eosdesignsystem.com)
 
 # Our "thank you" section
 
