@@ -21,6 +21,7 @@
     }
     WebComponents.waitFor(async () => {
       import('./components/alerts/index.js');
+      import('./components/buttons/index.js');
     });
   </script>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
@@ -76,6 +77,103 @@
     </eos-alert>
 
 
+    <h2>Primary button</h2>
+    <div style='display:flex'>
+      <eos-button type='primary'>
+        Button
+      </eos-button>
+      <eos-button type='primary-outline'>
+        Outline
+      </eos-button>
+      <eos-button type='primary' state='disabled'>
+        Disabled
+      </eos-button>
+      <eos-button type='primary-outline' state='disabled'>
+        Disabled
+      </eos-button>
+    </div>
+
+    <h2>Secondary button</h2>
+    <div style='display:flex'>
+      <eos-button type='secondary'>
+        Button
+      </eos-button>
+      <eos-button type='secondary' state='disabled'>
+        Disabled
+      </eos-button>
+    </div>
+
+    <h2>Secondary inverse button</h2>
+    <div style='display:flex; background: #686565; padding: 24px;'>
+      <eos-button type='secondary-inverse'>
+        Button
+      </eos-button>
+      <eos-button type='secondary-inverse' state='disabled'>
+        Disabled
+      </eos-button>
+    </div>
+
+    <h2>Danger button</h2>
+    <div style='display:flex;'>
+      <eos-button type='danger'>
+        Button
+      </eos-button>
+      <eos-button type='danger' state='disabled'>
+        Disabled
+      </eos-button>
+    </div>
+
+    <h2>Icon button</h2>
+    <div style='display:flex'>
+      <eos-button type='secondary' icon='autorenew'>
+        Button
+      </eos-button>
+      <eos-button type='primary' icon='autorenew'>
+        Button
+      </eos-button>
+      <eos-button type='primary-outline' icon='autorenew'>
+        Button
+      </eos-button>
+      <eos-button type='danger' icon='autorenew'>
+        Button
+      </eos-button>
+    </div>
+
+    <h2>Only icons</h2>
+    <div style='display:flex'>
+      <eos-button type='secondary' icon='add'></eos-button>
+      <eos-button type='primary' icon='create'></eos-button>
+      <eos-button type='primary-outline' icon='autorenew'></eos-button>
+      <eos-button type='danger' icon='autorenew'></eos-button>
+    </div>
+
+    <h2>Large buttons</h2>
+    <div>
+      <eos-button type='secondary' size='block'>
+        Button
+      </eos-button>
+      <eos-button type='primary' size='block'>
+        Button
+      </eos-button>
+    </div>
+
+    <h2>Small buttons</h2>
+    <div style='display:flex'>
+      <eos-button type='secondary' size='small'>
+        Button
+      </eos-button>
+      <eos-button type='primary' size='small'>
+        Button
+      </eos-button>
+      <eos-button type='secondary' size='small' icon='autorenew'>
+        Button
+      </eos-button>
+      <eos-button type='primary' size='small' icon='autorenew'>
+        Button
+      </eos-button>
+      <eos-button type='secondary' size='small' icon='add'></eos-button>
+      <eos-button type='primary' size='small' icon='create'></eos-button>
+    </div>
   </div>
 </body>
 
