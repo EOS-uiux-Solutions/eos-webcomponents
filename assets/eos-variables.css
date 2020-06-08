@@ -1,93 +1,37 @@
 :root {
-  --eos-bc-green-100: #E0F7F0;
-  --eos-bc-green-200: #B3ECD9;
-  --eos-bc-green-300: #4DD3A7;
-  --eos-bc-green-400: #26C994;
-  --eos-bc-green-500: #00C081;
-  --eos-bc-green-600: #00BA79;
-  --eos-bc-green-700: #00B26E;
-  --eos-bc-green-800: #00AA64;
-  --eos-bc-green-900: #009C51;
+  /* brand color - green */
+  --eos-bc-green-100: #e4f6ee;
+  --eos-bc-green-500: #30ba78;
+  --eos-bc-green-900: #139448;
 
-  /* brand color - blue */
-  --eos-bc-blue-100: #B6C0C6;
-  --eos-bc-blue-200: #8696A0;
-  --eos-bc-blue-300: #566B79;
-  --eos-bc-blue-400: #314C5D;
-  --eos-bc-blue-500: #0D2C40;
-  --eos-bc-blue-600: #0B273A;
-  --eos-bc-blue-700: #092132;
-  --eos-bc-blue-800: #071B2A;
-  --eos-bc-blue-900: #03101C;
-
-  /* brand color - orange */
-  --eos-bc-orange-100: #FDCEB3;
-  --eos-bc-orange-200: #FBAE81;
-  --eos-bc-orange-300: #F98D4F;
-  --eos-bc-orange-400: #F87429;
-  --eos-bc-orange-500: #F75C03;
-  --eos-bc-orange-600: #F65403;
-  --eos-bc-orange-700: #F54A02;
-  --eos-bc-orange-800: #F34102;
-  --eos-bc-orange-900: #F13001;
+  /* brand color - Pine */
+  --eos-bc-pine-500: #0c322c;
 
   /* brand color - cerulean */
-  --eos-bc-cerulean-100: #B3E8F6;
-  --eos-bc-cerulean-200: #80D9F1;
-  --eos-bc-cerulean-300: #4DC9EB;
-  --eos-bc-cerulean-400: #26BEE6;
-  --eos-bc-cerulean-500: #00B2E2;
-  --eos-bc-cerulean-600: #00ABDF;
-  --eos-bc-cerulean-700: #00A2DA;
-  --eos-bc-cerulean-800: #0099D6;
-  --eos-bc-cerulean-900: #008ACF;
-
-  /* brand color - violet */
-  --eos-bc-violet-100: #DAB9D9;
-  --eos-bc-violet-200: #C28BC0;
-  --eos-bc-violet-300: #A95DA7;
-  --eos-bc-violet-400: #963A94;
-  --eos-bc-violet-500: #841781;
-  --eos-bc-violet-600: #7C1479;
-  --eos-bc-violet-700: #71116E;
-  --eos-bc-violet-800: #670D64;
-  --eos-bc-violet-900: #540751;
+  --eos-bc-cerulean-100: #b3e8f6;
+  --eos-bc-cerulean-500: #00b2e2;
+  --eos-bc-cerulean-900: #008acf;
 
   /* brand color - red */
-  --eos-bc-red-100: #F5C2C7;
-  --eos-bc-red-200: #EE9AA2;
-  --eos-bc-red-300: #E7727D;
-  --eos-bc-red-400: #E15361;
-  --eos-bc-red-500: #DC3545;
-  --eos-bc-red-600: #D8303E;
-  --eos-bc-red-700: #D32836;
-  --eos-bc-red-800: #CE222E;
-  --eos-bc-red-900: #C5161F;
+  --eos-bc-red-100: #f5c2c7;
+  --eos-bc-red-500: #dc3545;
+  --eos-bc-red-900: #c5161f;
 
   /* brand color - yellow */
-  --eos-bc-yellow-100: #FFECB5;
-  --eos-bc-yellow-200: #FFE083;
-  --eos-bc-yellow-300: #FFD451;
-  --eos-bc-yellow-400: #FFCA2C;
-  --eos-bc-yellow-500: #FFC107;
-  --eos-bc-yellow-600: #FFBB06;
-  --eos-bc-yellow-700: #FFB305;
-  --eos-bc-yellow-800: #FFAB04;
-  --eos-bc-yellow-900: #FF9E02;
+  --eos-bc-yellow-100: #ffecb5;
+  --eos-bc-yellow-500: #ffc107;
+  --eos-bc-yellow-900: #ff9e02;
 
   /* brand color - gray */
-  --eos-bc-gray-50: #edeff0;
-  --eos-bc-gray-100: #E0DFDF;
-  --eos-bc-gray-200: #CBCACA;
-  --eos-bc-gray-300: #B6B4B4;
-  --eos-bc-gray-400: #A6A4A4;
+  --eos-bc-gray-50: #f2f2f2;
+  --eos-bc-gray-100: #e0dfdf;
+  --eos-bc-gray-300: #b6b4b4;
   --eos-bc-gray-500: #969494;
-  --eos-bc-gray-600: #8E8C8C;
-  --eos-bc-gray-700: #838181;
-  --eos-bc-gray-800: #797777;
+  --eos-bc-gray-700: #797777;
   --eos-bc-gray-900: #686565;
   --eos-bc-gray-1000: #141823;
 
   /* brand color - neutral */
   --eos-bc-white: #ffffff;
+
 }
