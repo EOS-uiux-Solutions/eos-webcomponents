@@ -8,7 +8,8 @@ class EosAlert extends LitElement {
       type: { type: String },
       scope: { type: String },
       title: { type: String },
-      icon: { type: Object }
+      icon: { type: Object },
+      close: { type: Boolean }
     }
   }
 
@@ -23,6 +24,7 @@ class EosAlert extends LitElement {
       'warning': 'warning',
       'danger': 'error'
     }
+    this.close = this.close
   }
 
   static get styles () {
@@ -198,9 +200,11 @@ class EosAlert extends LitElement {
             <div class='alert-title ${(this.title || 'hide')}'> ${this.title} </div>
             <p> <slot scope='${this.scope}'/> </p>
         </div>
-        <div class='alert-close' @click='${this.closeAlert}'>
-          <i class='eos-icons ${this.type === 'danger' ? 'hide' : ''} md-18'>close</i>
-        </div>
+        ${this.close?
+          '' : html`<div class='alert-close' @click='${this.closeAlert}'><i class='eos-icons ${this.type === 'danger' ? 'hide' : ''} md-18'>close</i></div>`
+        }
+
+
       </div>
     `;
   }
