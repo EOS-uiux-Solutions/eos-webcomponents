@@ -35,7 +35,6 @@ class EosAlert extends LitElement {
       position: relative;
     }
 
-
     ::slotted(a) {
       color: var(--eos-bc-gray-1000) ;
       text-decoration: underline;
@@ -50,8 +49,13 @@ class EosAlert extends LitElement {
       color: var(--eos-bc-white);
     }
 
+    slot[name=mobile]::slotted(div) {
+      display: inline-flex;
+    }
+
     slot[name=mobile]::slotted(a) {
-      color: red;
+      color: var(--eos-bc-white);
+      margin-right: 4px;
     }
 
     /* ==== General==== */
@@ -61,7 +65,7 @@ class EosAlert extends LitElement {
       margin-bottom: 20px;
       margin: 0;
       padding: 8px;
-      width: 100%;
+      width: auto;
       position: relative;
     }
 
@@ -124,6 +128,7 @@ class EosAlert extends LitElement {
       display: flex;
       flex-direction: column;
       width: 100%;
+      margin-right: 24px;
     }
 
     .section.success,
@@ -188,6 +193,10 @@ class EosAlert extends LitElement {
     /* ==== Mobile class ==== */
     .global .alert-global-mobile {
       display: none;
+    }
+
+    .mobile-slot {
+      display: inline-flex;
     }
 
     @media screen and (max-width: 769px) {
