@@ -232,9 +232,6 @@ class EosAlert extends LitElement {
             <p class='alert-global-mobile'> <slot scope='${this.scope}' name='mobile'/> </p>
             <p class='alert-global-desktop'> <slot scope='${this.scope}'/> </p>
         </div>
-        <div class='alert-close' @click='${this.closeAlert}'>
-          <i class='eos-icons ${this.type === 'danger' ? 'hide': ''} eos-18'>close</i>
-        </div>
         ${this.close?
           '' : html`<div class='alert-close' @click='${this.closeAlert}'><i class='eos-icons ${this.type === 'danger' ? 'hide' : ''} md-18'>close</i></div>`
         }
