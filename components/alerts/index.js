@@ -9,7 +9,8 @@ class EosAlert extends LitElement {
       scope: { type: String },
       title: { type: String },
       icon: { type: Object },
-      close: { type: Boolean }
+      close: { type: Boolean },
+      screen: { type: String }
     }
   }
 
@@ -18,6 +19,7 @@ class EosAlert extends LitElement {
     this.type = this.type
     this.scope = this.scope
     this.title = this.title
+    this.screen = this.screen
     this.icon = {
       'success': 'check_circle',
       'info': 'info',
@@ -185,16 +187,22 @@ class EosAlert extends LitElement {
     }
     
     /* ==== Mobile class ==== */
-
-
     .global.desktop {
-        display: flex;
-      }
+      display: flex;
+    }
+    
+    .global.mobile {
+      display: none;
+    }
 
     @media screen and (max-width: 769px) {
 
       .global.desktop {
         display: none;
+      }
+
+      .global.mobile {
+        display: flex;
       }
     }
     `;
@@ -210,7 +218,7 @@ class EosAlert extends LitElement {
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css"
       />
-      <div class='alert ${this.type} ${this.scope} desktop'>
+      <div class='alert ${this.type} ${this.scope} ${(this.screen || 'desktop')}'>
         <i class="alert-icon eos-icons eos-18">${this.icon[this.type]}</i>
         <div class='alert-body'>
             <div class='alert-title ${(this.title || 'hide')}'> ${this.title} </div>

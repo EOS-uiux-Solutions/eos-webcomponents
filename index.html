@@ -22,7 +22,6 @@
     WebComponents.waitFor(async () => {
       import('./components/alerts/index.js');
       import('./components/buttons/index.js');
-      import('./components/alerts-mobile/index.js');
     });
   </script>
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
@@ -54,10 +53,9 @@
       The new Patch Finder 2.0 will be released soon. You can <a href='#'>see the details </a> of this update.
     </eos-alert>
 
-    <!-- Global alert for mobile -->
-    <eos-alert-mobile type='warning'>
-      New released <a href="#">Patch Finder 2.0</a> update.
-    </eos-alert-mobile>
+    <eos-alert type='warning' scope='global' screen='mobile'>
+      The new Patch <a href='#'>see the details </a> of this update.
+    </eos-alert>
 
     <!-- Section scope alert -->
     <eos-alert type='success' scope='section' title="Success alert!">
