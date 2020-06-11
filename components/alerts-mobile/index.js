@@ -2,12 +2,10 @@
 // Issue about seeing the text without css: https://github.com/Polymer/lit-element/issues/553
 import { LitElement, html, css } from 'lit-element';
 
-class EosAlert extends LitElement {
+class EosAlertMobile extends LitElement {
   static get properties () {
     return {
       type: { type: String },
-      scope: { type: String },
-      title: { type: String },
       icon: { type: Object },
       close: { type: Boolean }
     }
@@ -16,8 +14,6 @@ class EosAlert extends LitElement {
   constructor () {
     super()
     this.type = this.type
-    this.scope = this.scope
-    this.title = this.title
     this.icon = {
       'success': 'check_circle',
       'info': 'info',
@@ -36,18 +32,16 @@ class EosAlert extends LitElement {
     }
 
     ::slotted(a) {
-      color: var(--eos-bc-gray-1000) ;
+      color: var(--eos-bc-white);
       text-decoration: underline;
       font-weight: bold;
+      font-size: 14px;
     }
 
     ::slotted(a:hover) {
       text-decoration: none;
     }
 
-    slot[scope=global]::slotted(a) {
-      color: var(--eos-bc-white);
-    }
 
     /* ==== General==== */
     .alert {
@@ -60,15 +54,7 @@ class EosAlert extends LitElement {
       position: relative;
     }
 
-    .alert
-    .alert-title {
-      font-size: 16px;
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
-
     p {
-      margin: 0;
       font-size: 14px;
     }
 
@@ -79,9 +65,6 @@ class EosAlert extends LitElement {
       margin-left: auto;
     }
 
-    .alert-title {
-      font-weight: bold;
-    }
 
     /* ==== Global ==== */
     .global {
@@ -114,58 +97,7 @@ class EosAlert extends LitElement {
       right: 24px;
     }
 
-    /* ==== Section and Inline ==== */
-    .section
-    .alert-body,
-    .inline
-    .alert-body {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      margin-right: 24px;
-    }
-
-    .section.success,
-    .inline.success {
-      background-color: var(--eos-bc-green-100);
-      border-color: var(--eos-bc-green-500);
-    }
-
-    .section.warning,
-    .inline.warning {
-      background-color: var(--eos-bc-yellow-100);
-      border-color: var(--eos-bc-yellow-900);
-    }
-
-    .section.info,
-    .inline.info {
-      background-color: var(--eos-bc-cerulean-100);
-      border-color: var(--eos-bc-cerulean-500);
-    }
-
-    .section.danger,
-    .inline.danger {
-      background-color: var(--eos-bc-red-100);
-      border-color: var(--eos-bc-red-500);
-    }
-
     /* ==== Icons inside alerts color ==== */
-    .success .alert-icon {
-      color: var(--eos-bc-green-500)
-    }
-
-    .warning .alert-icon {
-      color: var(--eos-bc-yellow-900)
-    }
-
-    .info .alert-icon {
-      color: var(--eos-bc-cerulean-500)
-    }
-
-    .danger .alert-icon {
-      color: var(--eos-bc-red-500)
-    }
-
     .global .alert-icon {
       color: #fff;
     }
@@ -184,17 +116,15 @@ class EosAlert extends LitElement {
       vertical-align: bottom;
     }
     
-    /* ==== Mobile class ==== */
+     /* ==== Mobile class ==== */
 
-
-    .global.desktop {
-        display: flex;
-      }
+    .global.mobile {
+      display: none;
+    }
 
     @media screen and (max-width: 769px) {
-
-      .global.desktop {
-        display: none;
+      .global.mobile {
+        display: flex;
       }
     }
     `;
@@ -210,11 +140,11 @@ class EosAlert extends LitElement {
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css"
       />
-      <div class='alert ${this.type} ${this.scope} desktop'>
+
+      <div class='alert ${this.type} global mobile'>
         <i class="alert-icon eos-icons eos-18">${this.icon[this.type]}</i>
         <div class='alert-body'>
-            <div class='alert-title ${(this.title || 'hide')}'> ${this.title} </div>
-            <p> <slot scope='${this.scope}'/> </p>
+            <p> <slot/> </p>
         </div>
         ${this.close?
           '' : html`<div class='alert-close' @click='${this.closeAlert}'><i class='eos-icons ${this.type === 'danger' ? 'hide' : ''} md-18'>close</i></div>`
@@ -225,4 +155,4 @@ class EosAlert extends LitElement {
 }
 
 
-customElements.define('eos-alert', EosAlert);
+customElements.define('eos-alert-mobile', EosAlertMobile);
