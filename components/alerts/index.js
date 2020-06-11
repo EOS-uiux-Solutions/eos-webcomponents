@@ -9,7 +9,8 @@ class EosAlert extends LitElement {
       scope: { type: String },
       title: { type: String },
       icon: { type: Object },
-      close: { type: Boolean }
+      close: { type: Boolean },
+      screen: { type: String }
     }
   }
 
@@ -18,6 +19,7 @@ class EosAlert extends LitElement {
     this.type = this.type
     this.scope = this.scope
     this.title = this.title
+    this.screen = this.screen
     this.icon = {
       'success': 'check_circle',
       'info': 'info',
@@ -35,7 +37,6 @@ class EosAlert extends LitElement {
       position: relative;
     }
 
-
     ::slotted(a) {
       color: var(--eos-bc-gray-1000) ;
       text-decoration: underline;
@@ -47,7 +48,7 @@ class EosAlert extends LitElement {
     }
 
     slot[scope=global]::slotted(a) {
-      color: white ;
+      color: var(--eos-bc-white);
     }
 
     /* ==== General==== */
@@ -57,7 +58,7 @@ class EosAlert extends LitElement {
       margin-bottom: 20px;
       margin: 0;
       padding: 8px;
-      width: 100%;
+      width: auto;
       position: relative;
     }
 
@@ -77,6 +78,7 @@ class EosAlert extends LitElement {
       cursor: pointer;
       position: absolute;
       right: 0;
+      margin-left: auto;
     }
 
     .alert-title {
@@ -94,10 +96,12 @@ class EosAlert extends LitElement {
       padding: 0 16px;
       position: fixed;
       top: 0;
-      width: 99%;
+      width: calc(100% - 20px);
       z-index: 1040;
     }
-
+    .global.success {
+      background-color: var(--eos-bc-green-500);
+    }
     .global.warning {
       background-color: var(--eos-bc-yellow-900);
     }
@@ -120,6 +124,7 @@ class EosAlert extends LitElement {
       display: flex;
       flex-direction: column;
       width: 100%;
+      margin-right: 24px;
     }
 
     .section.success,
@@ -172,13 +177,33 @@ class EosAlert extends LitElement {
       display: none;
     }
 
-    .md-18 {
+    .eos-18 {
       font-size: 18px;
     }
 
     .eos-icons {
       margin-right: 8px;
       vertical-align: bottom;
+    }
+    
+    /* ==== Mobile class ==== */
+    .global.desktop {
+      display: flex;
+    }
+    
+    .global.mobile {
+      display: none;
+    }
+
+    @media screen and (max-width: 769px) {
+
+      .global.desktop {
+        display: none;
+      }
+
+      .global.mobile {
+        display: flex;
+      }
     }
     `;
   }
@@ -193,9 +218,8 @@ class EosAlert extends LitElement {
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css"
       />
-
-      <div class='alert ${this.type} ${this.scope}'>
-        <i class="alert-icon eos-icons md-18">${this.icon[this.type]}</i>
+      <div class='alert ${this.type} ${this.scope} ${(this.screen || 'desktop')}'>
+        <i class="alert-icon eos-icons eos-18">${this.icon[this.type]}</i>
         <div class='alert-body'>
             <div class='alert-title ${(this.title || 'hide')}'> ${this.title} </div>
             <p> <slot scope='${this.scope}'/> </p>
@@ -203,8 +227,6 @@ class EosAlert extends LitElement {
         ${this.close?
           '' : html`<div class='alert-close' @click='${this.closeAlert}'><i class='eos-icons ${this.type === 'danger' ? 'hide' : ''} md-18'>close</i></div>`
         }
-
-
       </div>
     `;
   }

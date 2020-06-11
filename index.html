@@ -33,10 +33,15 @@
     }
 
     .presentation {
-      width: 700px;
+      width: 70%;
+      max-width: 800px;
       display: flex;
       flex-direction: column;
       margin: 100px auto;
+    }
+
+    eos-alert {
+      margin-top: 15px;
     }
   </style>
 </head>
@@ -45,8 +50,11 @@
   <div class="presentation">
     <!-- Global scope alert -->
     <eos-alert type='warning' scope='global'>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. In eligendi qui explicabo blanditiis quaerat nisi <a
-        href="#">asasa</a>
+      The new Patch Finder 2.0 will be released soon. You can <a href='#'>see the details </a> of this update.
+    </eos-alert>
+
+    <eos-alert type='warning' scope='global' screen='mobile'>
+      The new Patch <a href='#'>see the details </a> of this update.
     </eos-alert>
 
     <!-- Section scope alert -->
@@ -176,5 +184,4 @@
     </div>
   </div>
 </body>
-
 </html>
