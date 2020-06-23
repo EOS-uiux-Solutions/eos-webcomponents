@@ -38,7 +38,7 @@ class EosAlert extends LitElement {
     }
 
     ::slotted(a) {
-      color: var(--eos-bc-gray-1000) ;
+      color: var(--eos-bc-gray-1000)!important;
       text-decoration: underline;
       font-weight: bold;
     }
@@ -48,7 +48,7 @@ class EosAlert extends LitElement {
     }
 
     slot[scope=global]::slotted(a) {
-      color: var(--eos-bc-white);
+      color: var(--eos-bc-white)!important;
     }
 
     /* ==== General==== */
