@@ -43,45 +43,58 @@
     eos-alert {
       margin-top: 15px;
     }
+
   </style>
 </head>
 
 <body>
+  <!-- Global scope alert -->
+
+  <eos-alert type='success' scope='global'>
+    The new Patch Finder 2.0 will be released soon. You can <a href='#'>see the details</a> of this update.
+  </eos-alert>
+
+  <eos-alert type='success' scope='global' screen='mobile'>
+    The new Patch <a href='#'>see the details</a> of this update.
+  </eos-alert>
+
   <div class="presentation">
-    <!-- Global scope alert -->
-    <eos-alert type='warning' scope='global'>
-      The new Patch Finder 2.0 will be released soon. You can <a href='#'>see the details </a> of this update.
-    </eos-alert>
-
-    <eos-alert type='warning' scope='global' screen='mobile'>
-      The new Patch <a href='#'>see the details </a> of this update.
-    </eos-alert>
-
     <!-- Section scope alert -->
-    <eos-alert type='success' scope='section' title="Success alert!">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, fum?
+    <h2>Section alerts</h2>
+    <eos-alert type='success' scope='section' title="Success section alert!">
+      Lorem ipsum dolor sit amet <a href='#'>see the details</a> consectetur adipisicing elit. Sapiente, fum?
     </eos-alert>
 
-    <eos-alert type='info' scope='section' title="Success alert!">
-      Lorem ipsum dolor sit amet consectetur.
+    <eos-alert type='info' scope='section' title="Success section alert!">
+      Lorem ipsum dolor sit amet <a href='#'>see the details</a> consectetur.
+    </eos-alert>
+
+    <eos-alert type='warning' scope='section' title="Warning section alert!">
+      Lorem ipsum <a href='#'>see the details</a> dolor sit amet consectetur.
     </eos-alert>
 
     <eos-alert type='danger' scope='section' title="ERROR: 404!">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sint quam quasi incidunt, animi ipsam
-      similique asperiores natus, quibusdam necessitatibus minus saepe qui laborum, placeat quos molestias porro in.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sint quam quasi incidunt, animi ipsam <a href='#'>see the details</a> 
+      similique asperiores natus, quibusdam necessitatibus minus saepe.
     </eos-alert>
 
     <!-- Inline scope alert -->
-    <eos-alert type='info' scope='inline'>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, modi?
+    <h2>Inline alerts</h2>
+    
+    <eos-alert type='success' scope='inline'>
+      Lorem ipsum dolor sit <a href="#">Test</a> amet consectetur adipisicing elit. Vitae, modi?
     </eos-alert>
 
-    <eos-alert type='warning' scope='inline' close='false'>
-      Lorem ipsum dolor sit.
+    <eos-alert type='info' scope='inline' close='false'>
+      <a href="#">Test</a> Lorem ipsum dolor sit.
+    </eos-alert>
+
+    <eos-alert type='warning' scope='inline'>
+      Lorem ipsum <a href="#">Test</a> dolor sit.
     </eos-alert>
 
     <eos-alert type='danger' scope='inline' close='false'>
-      Lorem ipsum, dolor sit amet consectetur adipisicing. <a href="#">Test</a>
+      Lorem ipsum, dolor sit amet consectetur <a href="#">Test</a> adipisicing.
     </eos-alert>
 
 
