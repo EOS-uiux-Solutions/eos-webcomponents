@@ -1,6 +1,6 @@
 {
   "name": "eos-webcomponents",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "The web components library for EOS",
   "main": "index.js",
   "scripts": {
