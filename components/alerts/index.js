@@ -38,17 +38,17 @@ class EosAlert extends LitElement {
     }
 
     ::slotted(a) {
-      color: var(--eos-bc-gray-1000)!important;
-      text-decoration: underline;
-      font-weight: bold;
+      color: var(--eos-bc-gray-1000) !important;
+      text-decoration: underline !important;
+      font-weight: bold !important;
     }
 
     ::slotted(a:hover) {
-      text-decoration: none;
+      text-decoration: none !important;
     }
 
     slot[scope=global]::slotted(a) {
-      color: var(--eos-bc-white)!important;
+      color: var(--eos-bc-white) !important;
     }
 
     /* ==== General==== */
